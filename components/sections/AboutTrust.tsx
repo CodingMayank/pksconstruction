@@ -121,7 +121,7 @@ export function AboutTrust() {
                 Service area
               </p>
               <p className="font-medium">
-                Gaur Yamuna City, 16th Park View GYC &amp; surrounding UP
+                Gaur Yamuna City 57, 6th Park View GYC &amp; surrounding UP
               </p>
             </div>
           </div>
