@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const YEARS_ACTIVE = new Date().getFullYear() - 2023;
+const YEARS_ACTIVE = new Date().getFullYear() - 2021;
 
 export function AboutTrust() {
   const sectionRef = useRef<HTMLElement>(null);
