@@ -65,13 +65,13 @@ export function Contact() {
                   content: (
                     <>
                       <a
-                        href="tel:+919818171494"
+                        href="tel:+919871417306"
                         className="text-xl font-bold text-[var(--color-charcoal)] hover:text-[var(--color-safety)] transition-colors block"
                       >
-                        +91 98181 71494
+                        +91 98714 17306
                       </a>
                       <a
-                        href="https://wa.me/919818171494"
+                        href="https://wa.me/919871417306"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm font-bold text-[#25D366] hover:underline mt-1 inline-flex items-center gap-1 group"
@@ -105,7 +105,7 @@ export function Contact() {
                         P.K.S. Construction
                       </p>
                       <p className="text-[var(--color-steel)]">
-                        16th Park View GYC
+                        57, 6th Park View GYC
                         <br />
                         Gaur Yamuna City, Uttar Pradesh
                       </p>
