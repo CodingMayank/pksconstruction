@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-charcoal: #26262b;
+  --color-concrete: #edeae2; /* using concrete instead of concrete-light for simpler class name */
+  --color-blueprint: #2c4a6b;
+  --color-steel: #6e6c64;
+  --color-safety: #e1592a;
+  --color-off-white: #f7f5f0;
+
+  --color-background: var(--color-concrete);
+  --color-foreground: var(--color-charcoal);
+
+  --font-sans: var(--font-archivo), var(--font-inter), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @theme inline {
+    --color-background: var(--color-charcoal);
+    --color-foreground: var(--color-off-white);
   }
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
 }
