@@ -14,13 +14,14 @@ export function AboutTrust() {
 
   useLayoutEffect(() => {
     const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     const ctx = gsap.context(() => {
       if (reduceMotion) {
         gsap.set(".at-fade", { opacity: 1, y: 0 });
-        if (counterRef.current) counterRef.current.textContent = `${YEARS_ACTIVE}+`;
+        if (counterRef.current)
+          counterRef.current.textContent = `${YEARS_ACTIVE}+`;
         return;
       }
 
@@ -55,7 +56,7 @@ export function AboutTrust() {
             }
           },
         },
-        "-=0.5"
+        "-=0.5",
       );
     }, sectionRef);
 
@@ -90,17 +91,28 @@ export function AboutTrust() {
 
             <div className="space-y-4 text-[var(--color-steel)] leading-relaxed at-fade">
               <p>
-                At P.K.S. Construction, we don&apos;t just build houses; we construct homes designed to last generations. Operating primarily in Gaur Yamuna City and the surrounding Uttar Pradesh region, we bring structural expertise and meticulous finishing to every project.
+                At P.K.S. Construction, we don&apos;t just build houses; we
+                construct homes designed to last generations. Operating
+                primarily in Gaur Yamuna City and the surrounding Uttar Pradesh
+                region, we bring structural expertise and meticulous finishing
+                to every project.
               </p>
               <p>
-                From the first excavation to the final coat of paint, our team manages the entire lifecycle of construction, ensuring transparency, durability, and on-time delivery.
+                From the first excavation to the final coat of paint, our team
+                manages the entire lifecycle of construction, ensuring
+                transparency, durability, and on-time delivery.
               </p>
               <p>
                 The company is led by{" "}
                 <span className="text-[var(--color-off-white)] font-medium">
                   Mr. Pramod Kumar Sharma
                 </span>
-                , who oversees every project personally from groundwork to handover.
+                , who brings over{" "}
+                <span className="text-[var(--color-off-white)] font-medium">
+                  25 years of experience in civil engineering and construction
+                </span>
+                , overseeing every project personally from groundwork to
+                handover.
               </p>
             </div>
 
