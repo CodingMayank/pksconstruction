@@ -1,10 +1,10 @@
 "use client";
 
 import { useLayoutEffect, useRef } from "react";
-import Image from "next/image";
 import gsap from "gsap";
 import { HouseBlueprint } from "@/components/icons/HouseBlueprint";
 import { Button } from "@/components/ui/Button";
+import { Navbar } from "@/app/components/Navbar";
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -23,13 +23,11 @@ export function Hero() {
         return;
       }
 
-      // Initial state for animation
       gsap.set(".hero-fade", { opacity: 0, y: 40 });
       gsap.set(".hero-logo", { opacity: 0, y: -20 });
 
       const tl = gsap.timeline();
 
-      // Whole-page fade-in veil
       if (veil) {
         tl.to(veil, {
           opacity: 0,
@@ -41,7 +39,6 @@ export function Hero() {
         });
       }
 
-      // Staggered professional fade-in
       tl.to(
         ".hero-logo",
         { opacity: 1, y: 0, duration: 1, ease: "expo.out" },
@@ -58,7 +55,6 @@ export function Hero() {
         "-=0.8"
       );
 
-      // Subtle parallax drift on the blueprint as the mouse moves
       const section = sectionRef.current;
       const blueprint = section?.querySelector(".hero-blueprint");
       if (!section || !blueprint) return;
@@ -85,8 +81,11 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
+      id="hero"
       className="relative min-h-[100dvh] flex flex-col justify-center overflow-hidden bg-[var(--color-concrete)] selection:bg-[var(--color-blueprint)] selection:text-white"
     >
+      <Navbar />
+
       {/* Full-page fade-in veil, dissolves on load */}
       <div className="page-veil absolute inset-0 z-50 bg-[var(--color-concrete)]" />
 
@@ -97,9 +96,12 @@ export function Hero() {
       <div className="absolute inset-0 z-0 flex items-center justify-center lg:justify-end lg:pr-24 mix-blend-multiply">
         <HouseBlueprint className="hero-blueprint w-full max-w-3xl h-auto opacity-30 brightness-[0.7] contrast-125 saturate-150 drop-shadow-xl" />
       </div>
-      
+
       {/* Gradient Overlay for Text Readability */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[var(--color-concrete)] via-[var(--color-concrete)]/80 to-transparent" />
+
+      {/* Bottom transition into About Trust */}
+      {/* <div className="absolute inset-x-0 bottom-0 h-56 md:h-72 z-[6] bg-gradient-to-b from-transparent via-[var(--color-concrete)]/70 to-[var(--color-charcoal)] pointer-events-none" /> */}
 
       {/* Main Content Container */}
       <div className="container relative z-10 mx-auto px-6 py-24 md:py-32">
@@ -111,12 +113,12 @@ export function Hero() {
                 P.K.S. Construction
               </h2>
             </div>
-            
+
             <h1 className="hero-fade text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-600 leading-[1.1] pb-2">
               Building homes in <br className="hidden md:block" />
               Gaur Yamuna City.
             </h1>
-            
+
             <p className="hero-fade text-lg sm:text-xl text-[var(--color-steel)] max-w-xl leading-relaxed font-light">
               From foundation to handover, we build residential properties with uncompromising precision, premium quality, and enduring structural integrity.
             </p>
@@ -159,13 +161,16 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Modern Mouse Scroll Indicator */}
-      <div className="hero-fade absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-70 transition-opacity hover:opacity-100 cursor-pointer">
+      {/* Scroll Indicator */}
+      {/* <a
+        href="#about"
+        className="hero-fade absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 opacity-70 transition-opacity hover:opacity-100 cursor-pointer"
+      >
         <span className="text-[10px] font-mono tracking-widest text-gray-500 uppercase">Scroll</span>
         <div className="w-[26px] h-[40px] rounded-full border-2 border-gray-400 flex justify-center p-1">
           <div className="w-1 h-2 bg-gray-500 rounded-full animate-bounce" />
         </div>
-      </div>
+      </a> */}
     </section>
   );
 }

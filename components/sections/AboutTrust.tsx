@@ -60,7 +60,6 @@ export function AboutTrust() {
       );
     }, sectionRef);
 
-    // recalc trigger positions after everything (fonts/images) has settled
     const refresh = () => ScrollTrigger.refresh();
     window.addEventListener("load", refresh);
     const t = setTimeout(refresh, 500);
@@ -75,13 +74,32 @@ export function AboutTrust() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 md:py-24 bg-[var(--color-charcoal)] text-[var(--color-off-white)]"
+      id="about"
+      className="relative overflow-hidden pt-4 pb-20 md:pb-24 bg-[var(--color-charcoal)] text-[var(--color-off-white)]"
     >
-      <div className="container mx-auto px-6">
+      {/* Faint continuation of the Hero's grid, softens the seam */}
+      <div className="absolute inset-x-0 top-0 h-72 z-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+
+      {/* Floating connector */}
+      <div className="at-fade relative z-20 mb-16 md:mb-20 mx-auto max-w-2xl px-8 shadow-black/40 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center">
+        {/* <span className="font-mono text-xs tracking-widest uppercase text-[var(--color-safety)]">
+          25+ Years
+        </span>
+        <span className="w-1 h-1 rounded-full bg-[var(--color-off-white)]/25 hidden sm:block" />
+        <span className="font-mono text-xs tracking-widest uppercase text-[var(--color-off-white)]/60">
+          Owner-Led Construction
+        </span>
+        <span className="w-1 h-1 rounded-full bg-[var(--color-off-white)]/25 hidden sm:block" />
+        <span className="font-mono text-xs tracking-widest uppercase text-[var(--color-off-white)]/60">
+          Gaur Yamuna City &amp; UP
+        </span> */}
+      </div>
+
+      <div className="container relative z-10 mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="space-y-8">
             <div className="space-y-2 at-fade">
-              <p className="font-mono text-sm tracking-widest text-[var(--color-blueprint)] uppercase">
+              <p className="font-mono text-sm tracking-widest text-[var(--color-gold)] uppercase">
                 About us
               </p>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
@@ -89,7 +107,7 @@ export function AboutTrust() {
               </h2>
             </div>
 
-            <div className="space-y-4 text-[var(--color-steel)] leading-relaxed at-fade">
+            <div className="space-y-4 text-[var(--color-off-white)]/60 leading-relaxed at-fade">
               <p>
                 At P.K.S. Construction, we don&apos;t just build houses; we
                 construct homes designed to last generations. Operating
@@ -116,8 +134,8 @@ export function AboutTrust() {
               </p>
             </div>
 
-            <div className="pt-4 border-t border-[var(--color-steel)]/30 at-fade">
-              <p className="font-mono text-sm tracking-widest text-[var(--color-blueprint)] uppercase mb-2">
+            <div className="pt-4 border-t border-[var(--color-off-white)]/15 at-fade">
+              <p className="font-mono text-sm tracking-widest text-[var(--color-gold)] uppercase mb-2">
                 Service area
               </p>
               <p className="font-medium">
@@ -127,32 +145,32 @@ export function AboutTrust() {
           </div>
 
           <div className="grid grid-cols-2 gap-6">
-            <div className="at-fade group space-y-2 p-6 border border-[var(--color-steel)]/30 bg-[var(--color-charcoal)] transition-all duration-300 hover:border-[var(--color-safety)]/60 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-safety)]/10">
+            <div className="at-fade group space-y-2 p-6 border border-[var(--color-off-white)]/15 bg-[var(--color-charcoal)] transition-all duration-300 hover:border-[var(--color-safety)]/60 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-safety)]/10">
               <p
                 ref={counterRef}
                 className="text-4xl md:text-5xl font-bold text-[var(--color-safety)] tabular-nums"
               >
                 0+
               </p>
-              <p className="font-mono text-xs tracking-wider text-[var(--color-steel)] uppercase">
+              <p className="font-mono text-xs tracking-wider text-[var(--color-off-white)]/50 uppercase">
                 Years active
               </p>
             </div>
 
-            <div className="at-fade group space-y-2 p-6 border border-[var(--color-steel)]/30 bg-[var(--color-charcoal)] transition-all duration-300 hover:border-[var(--color-blueprint)]/60 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-blueprint)]/10">
-              <p className="text-2xl md:text-3xl font-bold text-[var(--color-blueprint)] leading-tight">
+            <div className="at-fade group space-y-2 p-6 border border-[var(--color-off-white)]/15 bg-[var(--color-charcoal)] transition-all duration-300 hover:border-[var(--color-gold)]/60 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-gold)]/10">
+              <p className="text-2xl md:text-3xl font-bold text-[var(--color-gold)] leading-tight">
                 Owner-led
               </p>
-              <p className="font-mono text-xs tracking-wider text-[var(--color-steel)] uppercase">
+              <p className="font-mono text-xs tracking-wider text-[var(--color-off-white)]/50 uppercase">
                 Pramod Kumar Sharma
               </p>
             </div>
 
-            <div className="at-fade group space-y-2 p-6 border border-[var(--color-steel)]/30 bg-[var(--color-charcoal)] col-span-2 transition-all duration-300 hover:border-[var(--color-safety)]/60 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-safety)]/10">
-              <p className="text-3xl font-bold text-[var(--color-blueprint)]">
+            <div className="at-fade group space-y-2 p-6 border border-[var(--color-off-white)]/15 bg-[var(--color-charcoal)] col-span-2 transition-all duration-300 hover:border-[var(--color-safety)]/60 hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-safety)]/10">
+              <p className="text-3xl font-bold text-[var(--color-safety)]">
                 100%
               </p>
-              <p className="font-mono text-xs tracking-wider text-[var(--color-steel)] uppercase">
+              <p className="font-mono text-xs tracking-wider text-[var(--color-off-white)]/50 uppercase">
                 Commitment to quality
               </p>
             </div>

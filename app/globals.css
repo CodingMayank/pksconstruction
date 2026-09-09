@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 @theme inline {
+  --color-gold: #EDEAE2; /* warm brass — replaces blueprint as the accent in dark sections */
   --color-charcoal: #26262b;
   --color-concrete: #edeae2; /* using concrete instead of concrete-light for simpler class name */
   --color-blueprint: #2c4a6b;
   --color-steel: #6e6c64;
   --color-safety: #e1592a;
-  --color-off-white: #f7f5f0;
+  --color-off-white: #EDEAE2;
 
   --color-background: var(--color-concrete);
   --color-foreground: var(--color-charcoal);
