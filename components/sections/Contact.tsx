@@ -47,7 +47,7 @@ export function Contact() {
         </div>
 
         <div className="relative z-10 max-w-2xl mx-auto space-y-4">
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -55,7 +55,7 @@ export function Contact() {
             className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-[var(--color-safety)] uppercase"
           >
             CONTACT US
-          </motion.h1>
+          </motion.h2>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
