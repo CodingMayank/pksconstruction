@@ -61,7 +61,25 @@ const VIDEOS: ConstructionVideo[] = [
     plot: "Plot 21",
     description: "Plaster curing, lintel inspection, and surface preparation before turnkey handover.",
     badge: "QC Inspection",
-  },
+  },  
+{
+  id: "reel-5",
+  src: "/constructions/construction-5.mp4",
+  title: "Roof Tile Installation",
+  phase: "Roofing Phase",
+  plot: "Plot 57",
+  description: "Installation of roof tiles with proper alignment, spacing, and finishing for a durable and weather-resistant roof.",
+  badge: "Roofing Work",
+},
+{
+  id: "reel-6",
+  src: "/constructions/construction-6.mp4",
+  title: "Roof Tile Installation",
+  phase: "Roofing Phase",
+  plot: "Plot 57",
+  description: "Roof tile laying and finishing work to ensure proper coverage, alignment, and long-term protection.",
+  badge: "Roof Tiling",
+},
 ];
 
 export function VideoShowcase() {
