@@ -207,6 +207,8 @@ export function Contact() {
                 src="/contactcard.jpeg"
                 alt="P.K.S. Construction Visiting Card"
                 fill
+                unoptimized
+                loading="eager"
                 className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 448px"
               />
@@ -343,6 +345,7 @@ export function Contact() {
                   src="/contactcard.jpeg"
                   alt="P.K.S. Construction visiting card enlarged"
                   fill
+                  unoptimized
                   className="object-contain p-2"
                   priority
                 />
