@@ -3,6 +3,7 @@ import { AboutTrust } from "@/components/sections/AboutTrust";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { Services } from "@/components/sections/Services";
 import { Portfolio } from "@/components/sections/Portfolio";
+import { VideoShowcase } from "@/components/sections/VideoShowcase";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <ProcessTimeline />
       <Services />
       <Portfolio />
+      <VideoShowcase />
       <Testimonials />
       <Contact />
     </main>
