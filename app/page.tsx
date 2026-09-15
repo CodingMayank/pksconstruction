@@ -4,6 +4,7 @@ import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { Services } from "@/components/sections/Services";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { VideoShowcase } from "@/components/sections/VideoShowcase";
+import { HouseModels } from "@/components/sections/HouseModels";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
 import type { Metadata } from "next";
@@ -66,6 +67,7 @@ export default function Home() {
       <Services />
       <Portfolio />
       <VideoShowcase />
+      <HouseModels />
       <Testimonials />
       <Contact />
     </main>

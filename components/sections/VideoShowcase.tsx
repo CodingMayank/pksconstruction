@@ -61,25 +61,43 @@ const VIDEOS: ConstructionVideo[] = [
     plot: "Plot 21",
     description: "Plaster curing, lintel inspection, and surface preparation before turnkey handover.",
     badge: "QC Inspection",
-  },  
-{
-  id: "reel-5",
-  src: "/constructions/construction-5.mp4",
-  title: "Roof Tile Installation",
-  phase: "Roofing Phase",
-  plot: "Plot 57",
-  description: "Installation of roof tiles with proper alignment, spacing, and finishing for a durable and weather-resistant roof.",
-  badge: "Roofing Work",
-},
-{
-  id: "reel-6",
-  src: "/constructions/construction-6.mp4",
-  title: "Roof Tile Installation",
-  phase: "Roofing Phase",
-  plot: "Plot 57",
-  description: "Roof tile laying and finishing work to ensure proper coverage, alignment, and long-term protection.",
-  badge: "Roof Tiling",
-},
+  },
+  {
+    id: "reel-5",
+    src: "/constructions/construction-5.mp4",
+    title: "Roof Tile Installation",
+    phase: "Roofing Phase",
+    plot: "Plot 57",
+    description: "Installation of roof tiles with proper alignment, spacing, and finishing for a durable and weather-resistant roof.",
+    badge: "Roofing Work",
+  },
+  {
+    id: "reel-6",
+    src: "/constructions/construction-6.mp4",
+    title: "Roof Tile Installation",
+    phase: "Roofing Phase",
+    plot: "Plot 57",
+    description: "Roof tile laying and finishing work to ensure proper coverage, alignment, and long-term protection.",
+    badge: "Roof Tiling",
+  },
+  {
+    id: "reel-7",
+    src: "/constructions/construction-7.mp4",
+    title: "False Ceiling Installation",
+    phase: "Interior Finishing Phase",
+    plot: "Plot 57",
+    description: "False ceiling installation with precise framing and finishing to create a clean, modern, and well-finished interior space.",
+    badge: "False Ceiling",
+  },
+  {
+    id: "reel-8",
+    src: "/constructions/construction-8.mp4",
+    title: "False Ceiling Finishing",
+    phase: "Interior Finishing Phase",
+    plot: "Plot 57",
+    description: "Ceiling framework and finishing work completed with attention to alignment, detailing, and a seamless interior finish.",
+    badge: "Ceiling Work",
+  },
 ];
 
 export function VideoShowcase() {
@@ -134,7 +152,7 @@ export function VideoShowcase() {
     if (!video) return;
 
     if (video.paused) {
-      video.play().catch(() => {});
+      video.play().catch(() => { });
       setPlayingMap((prev) => ({ ...prev, [id]: true }));
     } else {
       video.pause();
@@ -152,7 +170,7 @@ export function VideoShowcase() {
   const toggleModalPlay = () => {
     if (!modalVideoRef.current) return;
     if (modalVideoRef.current.paused) {
-      modalVideoRef.current.play().catch(() => {});
+      modalVideoRef.current.play().catch(() => { });
       setModalPlaying(true);
     } else {
       modalVideoRef.current.pause();
@@ -241,7 +259,7 @@ export function VideoShowcase() {
                   onMouseEnter={() => {
                     const video = videoRefs.current[item.id];
                     if (video && video.paused) {
-                      video.play().catch(() => {});
+                      video.play().catch(() => { });
                       setPlayingMap((p) => ({ ...p, [item.id]: true }));
                     }
                   }}
