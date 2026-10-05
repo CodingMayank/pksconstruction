@@ -98,6 +98,15 @@ const VIDEOS: ConstructionVideo[] = [
     description: "Ceiling framework and finishing work completed with attention to alignment, detailing, and a seamless interior finish.",
     badge: "Ceiling Work",
   },
+ {
+  id: "reel-9",
+  src: "/constructions/construction-9.mp4",
+  title: "Rooftop Room Setup and Finishing",
+  phase: "Interior Finishing Phase",
+  plot: "Plot 57",
+  description: "Rooftop room construction and finishing in progress, showcasing the interior setup, ceiling work, and detailed finishing touches to create a clean, functional, and well-finished space.",
+  badge: "Room Finishing",
+},
 ];
 
 export function VideoShowcase() {
